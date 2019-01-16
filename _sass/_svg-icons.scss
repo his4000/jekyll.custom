@@ -1,0 +1,35 @@
+---
+---
+$imgurl: "{{ site.baseurl }}/assets/img"
+svg-icon {
+    width: 40px;
+    height: 40px;
+    display: inline-block;
+}
+  &.email {
+      background-image: url(data:$imgurl/email.svg);
+  }
+  &.facebook {
+      background-image: url(data:$imgurl/facebook.svg);
+  }
+  &.github {
+      background-image: url(data:$imgurl/github.svg);
+  }
+  &.instagram {
+      background-image: url(data:$imgurl/instagram.svg);
+  }
+  &.linkedin {
+      background-image: url(data:$imgurl/linkedin.svg);
+  }
+  &.twitter {
+      background-image: url(data:$imgurl/twitter.svg);
+  }
+  &.stackoverflow {
+      background-image: url(data:$imgurl/stackoverflow.svg);
+  }
+  &.youtube {
+      background-image: url(data:$imgurl/youtube.svg);
+  }
+  &.trello {
+      background-image: url(data:$imgurl/trello.svg);
+  }

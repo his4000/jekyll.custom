@@ -1,10 +1,38 @@
 <!doctype html>
 <html>
-        <head>
-                <meta charset="utf-8">
-                <title>{{ page.title }}</title>
-        </head>
-        <body>
-                {{ content }}
-        </body>
+    <head>
+        <meta charset="utf-8">
+        <title>{{ page.title }}</title>
+        <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/style.css" />
+    </head>
+    <body>
+        <div class="wrapper-head">
+            <div class="container">
+                <header class="site-head">
+                    <a href="{{ site.baseurl }}/" class="site-avatar"><img src="{{ site.avatar }}" /></a>
+                    
+                    <div class="site-info">
+                        <h1 class="site-name"><a href="{{ site.baseurl }}/">{{ site.name }}</a></h1>
+                        <p class="site-description">{{ site.description }}</p>
+                    </div>
+
+                    <nav>
+                        {% include navigators.html %}
+                    </nav>
+                </header>
+            </div>
+        </div>
+
+        <div id="main" class="container">
+            {{ content }}
+        </div>
+
+        <div class="wrapper-footer">
+            <div class="container">
+                <footer>
+                    {% include svg-icons.html %}
+                </footer>
+            </div>
+        </div>
+    </body>
 </html>

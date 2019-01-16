@@ -1,5 +1,17 @@
 ---
 layout: default
 title: Minsu Kim's Blog
+max_posts: 10
 ---
-<h1>{{ "Hello World!" | downcase }}</h1>
+<div class="content-wrapper">
+    <h1>New Articles</h1>
+    {% for post in site.posts | limit: {{ max_posts }} %}
+    <article class="posting-card">
+        <h1><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h1>
+
+        <div class="posting-card-entry">
+            {{ post.excerpt }}
+        </div>
+    </article>
+    {% endfor %}
+</div>
